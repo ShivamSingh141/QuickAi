@@ -4,6 +4,7 @@ import { Gem, Sparkle } from 'lucide-react'
 import { Protect, useAuth } from '@clerk/clerk-react'
 import Creationitem from '../components/Creationitem'
 import axios from 'axios'
+import toast from 'react-hot-toast'
 
 axios.defaults.baseURL = import.meta.env.VITE_BASE_URL;
 

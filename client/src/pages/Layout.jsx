@@ -15,7 +15,7 @@ const Layout = () => {
   <img className='cursor-pointer w-32 sm:w-44' src={assets.logo}alt="" onClick={()=>navigate('/')}/>
   {
    sidebar?  <X onClick={()=>setsidebar(false)} className='w-6 h-6 text-gray-600 sm:hidden'/>
-   :<Menu onClick={()=>setsidebar(false)} className='w-6 h-6 text-gray-600 sm:hidden'/>
+   :<Menu onClick={()=>setsidebar(true)} className='w-6 h-6 text-gray-600 sm:hidden'/>
   }
 
         </nav>
@@ -27,7 +27,7 @@ const Layout = () => {
 
       </div>
         
-                     {/* outlet is a rember this as a hole where the current page(Dashboard, Writearticl)will appear */}
+      {/* outlet is a rember this as a hole where the current page(Dashboard, Writearticl)will appear */}
     </div>
   ):(
     <div className='flex items-center justify-center h-screen'>

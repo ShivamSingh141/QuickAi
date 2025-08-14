@@ -148,7 +148,6 @@ res.json({success:true,content:secure_url});
 
 }
 
-
 //remove background
 
 export const removeimagebackground=async(req,res)=>{
@@ -174,7 +173,7 @@ export const removeimagebackground=async(req,res)=>{
         }]
       })
 console.log(secure_url);
-
+//placeholder variable is ${...}
 await sql `INSERT INTO creations (user_id, prompt, content, type) VALUES (${userId},'Remove background from image', ${secure_url}, 'image')`;
 
 res.json({success:true,content:secure_url});
@@ -276,7 +275,6 @@ res.json({success:true,content});
         res.json({success:false,message:error.message})
         
     }
-
 }
 
 

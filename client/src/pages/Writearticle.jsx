@@ -7,7 +7,7 @@ import { useAuth } from '@clerk/clerk-react';
 import Markdown from 'react-markdown';
 
 
-axios .defaults.baseURL=import .meta.env.VITE_BASE_URL;
+axios .defaults.baseURL=import.meta.env.VITE_BASE_URL;
 
 
 const Writearticle = () => {
@@ -104,6 +104,7 @@ border-gray-200 min-h-96 max-h-[600px]'>
     </div>
 
   </div>):(
+    //converts Markdown text from your backend into formatted HTML in the browser.
     <div className='mt-3 h-full overflow-y-scroll text-sm text-slate-600'>
   <div className='reset-tw'> 
     <Markdown>{content}</Markdown>

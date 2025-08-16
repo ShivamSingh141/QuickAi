@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { dummyCreationData } from '../assets/assets'
+
 import { Gem, Sparkle } from 'lucide-react'
 import { Protect, useAuth } from '@clerk/clerk-react'
 import Creationitem from '../components/Creationitem'
@@ -16,7 +16,7 @@ const {getToken} = useAuth();
 
   const getDashboardData=async()=>{
     try {
-      const {data}=await axios.get('/api/user/get-user-creations',{
+      const {data}=await axios.get('/api/ai/get-user-creations',{
         headers:{Authorization: `Bearer ${await getToken()}`}
           })
         if(data.success){
